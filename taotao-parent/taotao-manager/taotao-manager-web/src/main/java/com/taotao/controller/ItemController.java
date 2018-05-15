@@ -27,8 +27,8 @@ public class ItemController {
 	
 	@RequestMapping(value="/save",method=RequestMethod.POST)
 	@ResponseBody
-	public TaotaoResult  createItem(TbItem item) {
-		TaotaoResult result = itemService.createItem(item);
+	public TaotaoResult  createItem(TbItem item,String desc,String itemParams) throws Exception {
+		TaotaoResult result = itemService.createItem(item,desc,itemParams);
 		return result;
 	}
 }
